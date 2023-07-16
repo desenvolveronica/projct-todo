@@ -54,6 +54,15 @@ setTodos((prevState) => [...prevState, todo])
   setTime("");
 }
 
+const handleDelete = async(id) => {
+
+  await fetch(API + "/todos/" + id, {
+    method: "DELETE",
+  })
+
+  setTodos((prevState) => prevState.filter((todo) => todo.id !== id))
+}
+
 if(loading){
   return <p>Carregando...</p>
 }
@@ -100,7 +109,7 @@ if(loading){
               <span>
                 {!todo.done ? <BsBookmarkCheck/> : <BsBookmarkCheckFill/>}
               </span>
-              <BsTrash/>
+              <BsTrash onClick={() => handleDelete(todo.id) }/>
             </div>
           </div>
         ))}
