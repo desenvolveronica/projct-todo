@@ -10,18 +10,23 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
   
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
-
   const todo = {
     id: Math.random(),
     title,
     time,
     done: false,
   };
-
-  //Envio para API
   console.log(todo)
+  //Envio para API
+await fetch(API + "/todos", {
+  method: "POST",
+  body: JSON.stringify(todo),
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
 
   //Zerando os inputs
   setTitle("");
@@ -56,7 +61,6 @@ const handleSubmit = (e) => {
             value={time || ""}
             required/>
           </div>
-          <br/>
           <input type="submit" value="Criar Tarefa"/>
         </form>
       </div>

@@ -38,8 +38,27 @@
 }
 .form-control input {
     border: 1px solid #222;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: #C0C0C0;
     padding: .5em;
     color: #333;
+}
+input[type="submit"]{
+    background-color: #808080;
+    color: #fff;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: .8em;
+    cursor: pointer;
+    margin-top: 1em;
+    font-size: 1em;
+    border: solid 1px 
+
+}
+input[type="submit"]:hover{
+    border: solid 1px #b66374;
+    transition: all .5s linear;
+    color: #b66374;
+    background: #d3d3d3
 }
