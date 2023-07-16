@@ -1,9 +1,9 @@
 .App{
     width: 40%;
     margin: 2em auto;
-    background-color: #394049;
+    background-color: #d3d3d3;
     border-radius: 5px;
-    color: #fff;
+    color: #444;
 }
 
 .todo-header{
@@ -13,4 +13,33 @@
 }
 .todo-header h1 {
     margin: 0;
+}
+.form-todo{
+    padding: 1em;
+    margin: 0 2em;
+    border-bottom: 1px solid #2C3035;
+}
+
+.form-todo h2,
+.list-todo h2 {
+    text-align: center;
+    margin-top: 0;
+}   
+.form-control {
+    display: flex;
+    flex-direction : column;
+
+}
+.form-control label {
+    font-width: bold;
+    font-size: 1em;
+    margin-bottom: 0.4em;
+    margin-top: .5em
+}
+.form-control input {
+    border: 1px solid #222;
+    border-radius: 5px;
+    background-color: #C0C0C0;
+    padding: .5em;
+    color: #333;
 }

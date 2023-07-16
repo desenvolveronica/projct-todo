@@ -43,15 +43,9 @@ const handleSubmit = (e) => {
             placeholder='Título da Tarefa' 
             onChange = {(e) => setTitle(e.target.value)}
             value={title || ""}
-            required
-            />
-
+            required/>
           </div>
-        <input type="submit" value="Enviar"/>
         </form>
-      </div>
-      <div className="form-todo">
-        <h2>Insira sua próxima tarefa:</h2>
         <form onSubmit={handleSubmit}>
           <div className='form-control'>
             <label htmlFor="time">Duração: </label>
@@ -60,10 +54,10 @@ const handleSubmit = (e) => {
             placeholder='Tempo Estimado (em horas)' 
             onChange = {(e) => setTime(e.target.value)}
             value={time || ""}
-            required
-            />
+            required/>
           </div>
-        <input type="submit" value="Criar Tarefa"/>
+          <br/>
+          <input type="submit" value="Criar Tarefa"/>
         </form>
       </div>
       <div className="list-todo">
